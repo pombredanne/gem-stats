@@ -2,6 +2,8 @@
 
 View gemcutter stastics for any given gem.
 
+There's more planned, but I've got to wait for the Gemcutter API to come along. I hope to be able to show all versions and dependencies when available.
+
 ## Installation
 
 If you already have gemcutter as a source, it's as easy as:
