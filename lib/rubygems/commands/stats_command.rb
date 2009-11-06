@@ -1,8 +1,6 @@
 require 'httparty'
 
 class Gem::Commands::StatsCommand < Gem::Command
-  format :json
-
   def initialize
     super 'stats', 'View gemcutter statistics for any given gem'
   end
