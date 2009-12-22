@@ -2,8 +2,6 @@
 
 View gemcutter stastics for any given gem.
 
-There's more planned, but I've got to wait for the Gemcutter API to come along. I hope to be able to show all versions and dependencies when available.
-
 ## Installation
 
 If you already have gemcutter as a source, it's as easy as:
@@ -20,8 +18,10 @@ Otherwise, you'll need to install by source
 
     goldfish by Robert Gleeson
     --------------------------
-    Downloads:       8
-    Current version: 0.1.1
+    http://gemcutter.org/gems/goldfish
+
+    Downloads:       142
+    Current version: 0.1.3
 
 ## Copyright
 

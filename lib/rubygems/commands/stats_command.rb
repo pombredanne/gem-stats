@@ -14,17 +14,23 @@ class Gem::Commands::StatsCommand < Gem::Command
   end
 
   def get_stats gem
-    HTTParty.get "http://gemcutter.org/gems/#{gem}.json"
+    HTTParty.get "http://gemcutter.org/api/v1/gems/#{gem}.json"
   end
 
   def execute
     gem   = get_one_optional_argument
     stats = get_stats gem 
-    gem_name = "#{stats['name']} by #{stats['authors']}"
+
+    if stats.to_s == 'This rubygem could not be found.'
+      puts "Sorry kid, doesn't look like that gem exists!"
+    else
+      title = "#{stats['name']} by #{stats['authors']}"
     
-    puts gem_name
-    puts '-' * gem_name.size
-    puts "Downloads:       #{stats['downloads']}"
-    puts "Current version: #{stats['version']}"
+      puts title
+      puts '-' * title.size
+      puts "http://gemcutter.org/gems/#{stats['name']}\n\n"
+      puts "Downloads:       #{stats['downloads']}"
+      puts "Current version: #{stats['version']}"
+    end
   end
 end
