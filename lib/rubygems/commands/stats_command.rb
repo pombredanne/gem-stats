@@ -18,9 +18,15 @@ class Gem::Commands::StatsCommand < Gem::Command
   end
 
   def execute
-    gem   = get_one_optional_argument
-    stats = get_stats gem 
+    begin
+      gem = get_one_gem_name
+    rescue Gem::CommandLineError
+      puts 'Please specify a gem name (e.g. gem stats sinatra).'
+      exit
+    end
 
+    stats = get_stats gem 
+    
     if stats.to_s == 'This rubygem could not be found.'
       puts "Sorry kid, doesn't look like that gem exists!"
     else
