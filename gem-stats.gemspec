@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name     = 'gem-stats'
-  s.version  = '1.0.2'
-  s.date     = '2009-12-21'
+  s.version  = '1.0.3'
+  s.date     = '2009-12-22'
   s.summary  = 'View gemcutter statistics for any given gem.'
 
   s.authors  = ['Danny Tatom']
