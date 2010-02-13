@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name     = 'gem-stats'
-  s.version  = '1.0.3'
-  s.date     = '2009-12-22'
+  s.version  = '1.0.4'
+  s.date     = '2010-2-12'
   s.summary  = 'View gemcutter statistics for any given gem.'
 
   s.authors  = ['Danny Tatom']
@@ -14,5 +14,4 @@ Gem::Specification.new do |s|
              'lib/rubygems_plugin.rb']
 
   s.has_rdoc = false
-  s.add_dependency 'httparty', '>= 0.4.5'
 end
