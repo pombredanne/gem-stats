@@ -8,10 +8,14 @@ Gem::Specification.new do |s|
   s.email    = 'dannytatom@gmail.com'
   s.homepage = 'http://github.com/dannytatom/gem-stats'
   s.description = 'View statistics for given gems.'
-  
+ 
+  s.add_development_dependency 'turn'
+  s.add_development_dependency 'contest'
+ 
   s.files = ['README.md', 'LICENSE',
              'lib/rubygems/commands/stats_command.rb',
-             'lib/rubygems_plugin.rb']
+             'lib/rubygems_plugin.rb',
+             'test/test_gem_stats.rb']
 
   s.has_rdoc = false
 end
