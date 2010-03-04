@@ -3,7 +3,7 @@ require 'json'
 
 class Gem::Commands::StatsCommand < Gem::Command
   def initialize
-    super 'stats', 'View gemcutter statistics for any given gem'
+    super 'stats', 'View statistics for gems'
   end
 
   def arguments
@@ -23,7 +23,7 @@ class Gem::Commands::StatsCommand < Gem::Command
     end
 
     begin
-      open "http://gemcutter.org/api/v1/gems/#{gem}.json" do |results|
+      open "http://rubygems.org/api/v1/gems/#{gem}.json" do |results|
         results.each do |result|
           stats = JSON.parse result
     
