@@ -14,8 +14,7 @@ Gem::Specification.new do |s|
  
   s.files = ['README.md', 'LICENSE',
              'lib/rubygems/commands/stats_command.rb',
-             'lib/rubygems_plugin.rb',
-             'test/test_gem_stats.rb']
+             'lib/rubygems_plugin.rb']
 
   s.has_rdoc = false
 end
