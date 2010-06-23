@@ -1,6 +1,6 @@
 # gem-stats
 
-View stastics for any gem.
+View authors, dependencies, etc for rubygems.
 
 ## Installation
 
@@ -10,21 +10,23 @@ View stastics for any gem.
 
     > gem stats sinatra
 
-    sinatra by Blake Mizerany
-    http://gemcutter.org/gems/sinatra
+    sinatra by Blake Mizerany, Ryan Tomayko, Simon Rozet
+    http://rubygems.org/gems/sinatra
 
-    Total Downloads   34621
-    Version Downloads 29578
-    Current Version   0.9.4
+    Total Downloads   120277
+    Version Downloads 50868
+    Current Version   1.0
 
     Runtime Dependencies
-    rack >= 0.9.1
-    shotgun >= 0.2, < 1.0
-    rack-test >= 0.3.0
+    rack >= 1.0
 
     Development Dependencies
-    shotgun >= 0.2, < 1.0
+    less >= 0
+    erubis >= 0
+    builder >= 0
+    haml >= 0
     rack-test >= 0.3.0
+    shotgun >= 0.6, < 1.0
 
 ## Copyright
 
