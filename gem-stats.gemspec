@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name    = 'gem-stats'
-  s.version = '1.0.6'
+  s.version = '1.0.7'
   s.date    = '2010-6-23'
   s.summary = 'View authors, dependencies, etc for rubygems.'
 
@@ -15,5 +15,6 @@ Gem::Specification.new do |s|
 
   s.has_rdoc = false
 
+  s.required_rubygem_version   '>= 1.3.6'
   s.add_development_dependency 'contest'
 end
