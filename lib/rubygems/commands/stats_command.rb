@@ -25,6 +25,25 @@ class Gem::Commands::StatsCommand < Gem::Command
     end
   end
 
+  def sexify dependencies
+    lengths = []
+    dependencies.each do |dependency|
+      lengths.push(dependency['name'].length)
+    end
+
+    dependencies.each do |dependency|
+      name   = dependency['name']
+      req    = dependency['requirements']
+      space  = ' '
+      
+      (lengths.max - name.length).times do |x|
+        space += ' '
+      end
+
+      puts "#{name + space}\e[33m#{req}\e[0m"
+    end
+  end
+
   def execute
     begin
       gem = get_one_gem_name
@@ -43,21 +62,13 @@ class Gem::Commands::StatsCommand < Gem::Command
     puts "Current Version   \e[32m#{stats['version']}\e[0m"
 
     unless stats['dependencies']['runtime'].empty?
-      puts ''
-
-      puts 'Runtime Dependencies'
-      stats['dependencies']['runtime'].each do |dependency|
-        puts dependency['name'] + ' ' + dependency['requirements']
-      end
+      puts "\nRuntime Dependencies"
+      sexify(stats['dependencies']['runtime'])
     end
 
     unless stats['dependencies']['development'].empty?
-      puts ''
-      
-      puts 'Development Dependencies'
-      stats['dependencies']['development'].each do |dependency|
-        puts dependency['name'] + ' ' + dependency['requirements']
-      end
+      puts "\nDevelopment Dependencies"
+      sexify(stats['dependencies']['development'])
     end
   end
 end
