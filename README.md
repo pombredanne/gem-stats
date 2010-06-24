@@ -4,7 +4,7 @@ View authors, dependencies, etc for rubygems.
 
 ## Installation
 
-    sudo gem install gem-stats
+    gem install gem-stats
 
 ## Usage
 
@@ -21,12 +21,12 @@ View authors, dependencies, etc for rubygems.
     rack >= 1.0
 
     Development Dependencies
-    less >= 0
-    erubis >= 0
-    builder >= 0
-    haml >= 0
+    less      >= 0
+    erubis    >= 0
+    builder   >= 0
+    haml      >= 0
     rack-test >= 0.3.0
-    shotgun >= 0.6, < 1.0
+    shotgun   >= 0.6, < 1.0
 
 ## Copyright
 
