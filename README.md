@@ -8,7 +8,7 @@ View authors, dependencies, etc for rubygems.
 
 ## Usage
 
-![SHITS IN ACTION, BRAH](http://i.imgur.com/VdXvw.png)
+![SHITS IN ACTION, BRAH](http://i.imgur.com/8kA77.png)
 
 ## Copyright
 
