@@ -1,13 +1,12 @@
-require 'contest'
+require 'baretest'
 require 'lib/rubygems/commands/stats_command'
-begin; require 'turn'; rescue LoadError; end
 
-class GemStatsTest < Test::Unit::TestCase
-  context 'running gem stats' do
-    test 'should return some statistics' do
+BareTest.suite do
+  suite 'Running gem-stats' do
+    assert 'should return some statistics' do
       stats = Gem::Commands::StatsCommand.new.get_stats('sinatra')
-
-      assert_equal 'sinatra', stats['name']
+      
+      stats['name'] == 'sinatra'
     end
   end
 end
